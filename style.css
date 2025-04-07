@@ -266,6 +266,72 @@ span {
   opacity: 50%;
 }
 
+#menuOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(20, 20, 20, 0.95); /* fundo escuro semi-transparente */
+  display: none; /* começa oculto */
+  z-index: 99999; /* maior que tudo */
+  color: white;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+#menuOverlay.active {
+  display: block;
+}
+
+#menuOverlay .close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+#dynamicMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 10, 10, 0.95);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2rem;
+  z-index: 10000;
+}
+
+#dynamicMenu .closeBtn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--primary);
+  cursor: pointer;
+  align-self: flex-end;
+  margin-bottom: 1rem;
+}
+
+#dynamicMenu .menu-content p {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+
+#dynamicMenu a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+#dynamicMenu a:hover {
+  color: var(--text);
+}
+
+
 
 
 
