@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css?family=Manrope:700|Manrope:400');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Big+Shoulders+Inline:opsz@10..72&family=Honk:MORF@1&family=Offside&family=Press+Start+2P&family=Sixtyfour:SCAN@-33&family=Tektur:wdth@87.5&family=Viga&family=Wallpoet&family=Zen+Dots&display=swap');
 
 :root {
   --text: hsl(0, 0%, 99%);
@@ -16,6 +17,12 @@
   --accent: hsl(155, 100%, 94%);
   --accentBg: hsla(155, 100%, 94%, 1%);
   --accentHi: hsla(155, 100%, 100%, 25%);
+}
+
+.zen-dots-regular {
+  font-family: "Zen Dots", sans-serif;
+  font-weight: 100;
+  font-style: normal;
 }
 
 body {

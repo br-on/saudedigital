@@ -10,8 +10,8 @@ menu.innerHTML = `
     <button class="closeBtn" id="closeMenu">&times;</button>
     <div class="menu-content">
     <p><a href="sd.html">Saúde Digital</a></p>
-    <p><a href="#">Vigilância em Saúde</a></p>
-    <p><a href="#">Outra Opção</a></p>
+    <p><a href="vigilancia.html">Vigilância em Saúde</a></p>
+    
     </div>
 `;
 
