@@ -2,6 +2,10 @@
 @import url('https://fonts.googleapis.com/css?family=Manrope:700|Manrope:400');
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Big+Shoulders+Inline:opsz@10..72&family=Honk:MORF@1&family=Offside&family=Press+Start+2P&family=Sixtyfour:SCAN@-33&family=Tektur:wdth@87.5&family=Viga&family=Wallpoet&family=Zen+Dots&display=swap');
 
+* {
+  margin: 0;
+  padding: 0;
+}
 :root {
   --text: hsl(0, 0%, 99%);
   --textDim: hsl(0, 0%, 60%);
@@ -34,19 +38,29 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
-  overflow: hidden;
+  height: 85vh;
+}
+
+main {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  overflow-y: hidden;
 }
 
 nav {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   gap: 2rem;
   color: var(--textDim);
   width: 100%;
   box-sizing: border-box;
   z-index: 9999;
+  height: 15vh;
 }
 
 nav a {
@@ -61,22 +75,25 @@ nav a {
 
 .container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;  
+  flex-direction: column;
+  gap: 1rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+  width: 100%;
+  padding: 1rem 0;
 }
 
 .container p {
+  min-width: 250px;
+  flex-shrink: 0;
   background-color: rgba(250, 235, 215, 0.356);
-  padding: 5px;
-  margin: 5px;
-  border: solid 2px gray;
-  border-radius: 15px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 10px;
+  border-radius: 12px;
+  border: 2px solid gray;
+  text-align: center;
 }
+
 .container p:hover {
   background-color: rgba(250, 235, 215, 0.808);
   cursor: pointer;
@@ -88,14 +105,35 @@ nav a {
 .container a {
   text-decoration: none;
   color: aliceblue;
+
 }
 
-main {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Scrollbar estilizada para navegadores baseados em WebKit (Chrome, Edge, Safari) */
+.container::-webkit-scrollbar {
+  width: 8px;
 }
+
+.container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.container::-webkit-scrollbar-thumb {
+  background-color: var(--primaryHi);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+.container::-webkit-scrollbar-thumb:hover {
+  background-color: var(--primary);
+}
+
+/* Firefox */
+.container {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primaryHi) transparent;
+}
+
 
 .sitename {
   font-weight: bold;
@@ -166,7 +204,10 @@ main {
   fill: var(--text);
 }
 
-
+.subline {
+  border-bottom: solid 1.5px var(--primary);
+  border-radius: 5px;
+}
 
 .button {
   display: flex;
